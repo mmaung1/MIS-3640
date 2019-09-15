@@ -1,6 +1,6 @@
 import time
 time.time()
-currentdate = int(1437746094.5735958)
+currentdate = int(time.time())
 print(currentdate)
 days = currentdate//3600//24 #divide the seconds by seconds in an hour, then # of hours in a day 
 print(days)
@@ -19,4 +19,7 @@ print(seconds)
 time_of_day = "%s:%s:%s" % (hours,minutes,seconds) 
 print(time_of_day)
 print(time_of_day,"on", days, "days since epoch")
+
+print (time.gmtime(currentdate))
+
 

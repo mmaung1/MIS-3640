@@ -34,14 +34,14 @@ print(brian)
 # arc(brian,100,90)
 
 
-def polyline(t,n,lenght,angle):
-    for i in rang(n):
+def polyline(t,n,length,angle):
+    for i in range(n):
         t.fd(length)
         t.lt(angle)
 
 def polygon(t,n,length):
     angle = 360/n 
-    polyline(t,n,length,anlge)
+    polyline(t,n,length,angle)
 
 turtle.mainloop()
 

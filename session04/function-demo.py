@@ -39,6 +39,6 @@ print(give_me_a_break()) #print function is used to show results
 def give_ze_break():
     str1 = 'break'
     print('another break')
-    reutrn str1
+    return str1
     print('something else')
 print(give_ze_break) # will return line 1 of break, line 2 of another break, will not return something else break will be returned to give_ze_break. 

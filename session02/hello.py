@@ -20,10 +20,10 @@
 # 5 means keep the 5 decimal spaces when we keep, . means keep the ., f means floating number, not integer 
 
 # print('Age: {age}; Gender:{sex}'.format(sex='Female', age=20))
-# print('Age:{} Gender{}'.format('Female',20))
+print('Age:{} Gender{}'.format('Female',20))
 # f is a new data type, it is not a pure string, it contains a variable in it, but the variable must be contained in {}
-sex = 'Female'
-age = 20
+# sex = 'Female'
+# age = 20
 
-print(f'Age: {age}; Gender: {sex}')
-print('Age:{age}; Gender: {sex}'.format(sex=sex, age=age))
+# print(f'Age: {age}; Gender: {sex}')
+# print('Age:{age}; Gender: {sex}'.format(sex=sex, age=age))

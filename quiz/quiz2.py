@@ -4,22 +4,23 @@ Given 3 integers, a b c, return their sum. However, if two numbers are the same,
 """
 
 
-# def sum_uniques(a, b, c):
-#      """
-#      Given 3 integers, a b c, return their sum. However, if two numbers are the same, only return the other number. If three numbers are the same, return 0.
-#      """
-#     if a==b and b==c:
-#         retrun 0 
-#     elif a==b:
-#         return c
-#     elif b==c:
-#         return a
-#     elif a==c:
-#         return b
-#     else:
-        # return a+b+c
-   
+def sum_uniques(a, b, c):
+        
+     """
+     Given 3 integers, a b c, return their sum. However, if two numbers are the same, only return the other number. If three numbers are the same, return 0.
+     """
 
+#      if a == b and b == c:
+#              return 0
+#      elif a == b:
+#         return c
+#      elif a == c:
+#         return b 
+#      elif b == c:
+#         return a
+#      else:
+#         return a + b + c
+     
 
 # When you've completed your function, uncomment the
 # following lines and run this file to test!
@@ -109,36 +110,17 @@ If n is 5, expected output is:
 """
 
 def print_numbers(n):
-    # num = n
-    # iteration = 1 
-    # while num>0:
-    #     print((str(num)+' ')*iteration)
-    #     iteration+=1
-    #     num-=1
-
-    # for i in range(n-1):
-    #     print((str(n+1)+' ')*i)
-    #     n-=1
+    num = n
+    iteration = 1 
+    while num>0:
+        print((str(num)+' ')*iteration)
+        iteration+=1
+        num-=1
 
     for i in range(n):
         print((str(n-i)+' ')*(i+1))
+        #n-=1
 
-
-# def print_numbers(n):
-#     while n <= n:
-#         print(n)
-#         n -= n
-#         print(n,2)
-#         n -= n 
-#         print(n,3)
-#         print()
-
-# def print_numbers(n):
-#     for i in range(0,n):
-#         for j in range (0, i +1):
-#             print(n, end=" ")
-#         n -= 1
-#         print("\r")
 
 # When you've completed your function, uncomment the
 # following lines and run this file to test!

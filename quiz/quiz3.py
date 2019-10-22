@@ -52,10 +52,10 @@ def cold_call():
     """
     import random
     name={}
-    for student in NAMES_STRING:
-        NAMES_STRING.split(',')
-        name[student] = name.get(student, 0) + 1
-        name[student] = random.randint(0,100)
+    newnames = NAMES_STRING.split(', ')
+    for student in range(100):
+        namecall = random.choice(newnames)
+        name[namecall] = name.get(namecall,0)+1
     return name
 
 # When you've completed your function, uncomment the
@@ -79,14 +79,14 @@ def print_hist(data):
     to the positive integer. The rows should be printed in key order.
     No return is required.
     """
-    for name in data:
-        print(name, '*'*data[name])
+    for number in data:
+        print(f'{name}: '+'*'*number)
 
 # When you've completed your function, uncomment the
 # following lines and run this file to test!
 
-# roster_dict = cold_call()
-# print_hist(roster_dict)
+roster_dict = cold_call()
+print_hist(roster_dict)
 
 ## Expected output:
 ## Gregory: ******
@@ -133,8 +133,8 @@ def get_current_temp():
     f = urllib.request.urlopen(url)
     response_text = f.read().decode('utf-8')
     response_data = json.loads(response_text)
-    temp = int(response_data['main']['temp']-273.5*(9/5)+32)
-    return (f"The Temperature in {city} is {temp} farenheit.")
+    temp = int(response_data['main']['temp'])*(9/5)-459.67
+    return (f"The Temperature in {city} is {temp:.2f} farenheit.")
 
 # When you've completed your function, uncomment the
 # following lines and run this file to test!

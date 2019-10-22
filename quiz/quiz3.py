@@ -9,20 +9,24 @@ def is_decreasing(data):
     Return True if the list is currently sorted in decreasing order.
     Return False otherwise
     """
-    for i in range(len(data)-2):
-        if data[i]>data[i+1]>data[i+1+1]:
-            return True
-        else:
+    i = 0
+    for i in range(len(data)-1):
+        if data[i]<=data[i+1]:
             return False
+    return True
+    # if data.sort(reverse=True):
+    #     return True 
+    # else:
+    #     return False 
 
 
 # Uncomment the following lines to test
-# data_1 = [2019, 15, 10]
-# data_2 = [2019, 10, 15]
-# data_3 = [2019, 10, 10]
-# print(is_decreasing(data_1))
-# print(is_decreasing(data_2))
-# print(is_decreasing(data_3))
+data_1 = [2019, 15, 10]
+data_2 = [2019, 10, 15]
+data_3 = [2019, 10, 10]
+print(is_decreasing(data_1))
+print(is_decreasing(data_2))
+print(is_decreasing(data_3))
 
 ## Expected output:
 ## True
@@ -80,7 +84,7 @@ def print_hist(data):
     No return is required.
     """
     for number in data:
-        print(f'{name}: '+'*'*number)
+        print(number+":", data[number]*"*")
 
 # When you've completed your function, uncomment the
 # following lines and run this file to test!

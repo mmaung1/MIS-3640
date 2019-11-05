@@ -23,18 +23,18 @@ def days_until_birthday(birthday):
     if coming_bday<today:
         coming_bday = coming_bday.replace(today.year+1)
         next = coming_bday - today
-        print("Your next birthday is in", next)
+        return("Your next birthday is in", next)
     else:
         upcoming = coming_bday - today
-        print("your next birthday is",upcoming)
+        return("your next birthday is",upcoming)
     
     age = today.year - BIRTH.year
     if today.month == BIRTH.month and today.day>=BIRTH.day:
-        print('You are: ', age)
+        return('You are: ', age)
     elif today.month < BIRTH.month:
-        print('You are: ', age)
+        return('You are: ', age)
     else: 
-        print("You are: ", age-1)
+        return("You are: ", age-1)
     
 
  
@@ -45,10 +45,17 @@ def double_day(b1, b2):
     b1: datetime birthday of the younger person
     b2: datetime birthday of the older person
     """
-    day1=min(b1,b2)
-    day2=max(b1,b2)
+    day1=min(b1,b2) #looks for smallest
+    day2=max(b1,b2) #loofs for largest
     diff_days = day2+(day2-day1)
     print(diff_days)
+
+def challenge_exercise(b1,b2,number):
+    per1=b1
+    per2=b2
+    diff_in_age = (per1-per2)/number
+    print(diff_in_age)
+
 
 def datetime_exercises():
     """Exercise solutions."""
@@ -63,10 +70,10 @@ def datetime_exercises():
     print(days_until_birthday(birthday))
 
     # compute the day one person is twice as old as another
-    b1 = datetime(2017, 12, 25)
+    b1 = datetime(2017, 12, 25) 
     b2 = datetime(2010, 11, 1)
     print('Double Day', end=' ')
-    print(double_day(b1, b2))
+    double_day(b1, b2)
 
 
 # def main():

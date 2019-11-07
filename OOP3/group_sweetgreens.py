@@ -38,7 +38,7 @@ class Sweetgreens:
         """
         add a drink onto your order 
         """
-         return f"Your order has {drink} included"
+        return f"Your order has {drink} included"
 
     def __contains__(self,parameter1):
         """
@@ -54,7 +54,7 @@ class Sweetgreens:
 Myat_Order = Sweetgreens(['Kale','Arugula','Spinach','Romaine','Mesclun'],'Quinoa', 'Blackened Chicken Thighs', 'Corn', 'Avocado','Sesame Miso Ginger','White')
 print(Myat_Order)
 print(Myat_Order.vegetables(5))
-print(Myat_Order.beverage('Tangerine Cerveza'))
+print(Myat_Order.beverage('Tangerine Fresca'))
 
 Vicky_Order2 = Sweetgreens('Kale', 'Qunoa', 'Steelhead','Corn','Avocado','Olive Oil')
 print('White' in Vicky_Order2)
